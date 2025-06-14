@@ -3,8 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 @import "@fontsource/inter/variable.css";
+@import "@fontsource/playfair-display/latin.css";
 
-/* Define fonte Inter como principal */
+/* Define fonte Inter como principal, Playfair para títulos */
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -30,22 +31,21 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'InterVariable', 'Inter', 'system-ui', sans-serif;
+    font-family: 'InterVariable', 'Inter', 'system-ui', serif;
   }
-  /* Remover font-playfair */
-  /* .font-playfair {
+  .font-playfair {
     font-family: 'Playfair Display', serif;
     letter-spacing: -0.5px;
-  } */
+  }
 }
 
 @layer utilities {
   .animate-fade-in {
     animation: fade-in 0.5s ease;
   }
+  /* Pode criar uma classe para aplicar fonte sofisticada em textos se desejar */
 }
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(12px);}
   to { opacity: 1; transform: translateY(0);}
 }
-

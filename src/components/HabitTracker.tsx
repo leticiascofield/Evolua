@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 const habitsList = ["Beber água", "Estudar", "Dormir 8h", "Exercício"];
 export function HabitTracker() {
@@ -18,7 +17,7 @@ export function HabitTracker() {
     );
   };
   return (
-    <div className="bg-white/90 rounded-lg shadow p-6 max-w-xl mx-auto my-8 animate-fade-in">
+    <div className="bg-white/90 rounded-lg shadow p-6 max-w-xl w-full mx-auto my-8 animate-fade-in">
       <h3 className="font-semibold text-lg mb-3 text-gray-900">Habit tracker</h3>
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm">
@@ -26,7 +25,7 @@ export function HabitTracker() {
             <tr>
               <th className="py-1"></th>
               {["S", "T", "Q", "Q", "S", "S", "D"].map((d, i) => (
-                <th key={i} className="font-light text-xs px-2">{d}</th>
+                <th key={i} className="font-light text-xs px-2 text-right">{d}</th>
               ))}
             </tr>
           </thead>

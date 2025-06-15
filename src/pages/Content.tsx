@@ -6,7 +6,6 @@ export default function Content() {
       <div className="max-w-7xl mx-auto w-full">
         <h2 className="font-playfair text-2xl text-pink-700 font-bold mb-6">Sugestões & Novidades</h2>
         <ContentHighlights />
-        <div className="mt-8 text-xs text-gray-400 text-right">Explore conteúdos por podcast, vídeo, artigo ou tema.</div>
       </div>
     </div>
   );

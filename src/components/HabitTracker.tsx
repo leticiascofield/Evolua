@@ -1,35 +1,40 @@
-
 import { useState } from "react";
+
 const habitsList = ["Beber água", "Estudar", "Dormir 8h", "Exercício"];
+
 export function HabitTracker() {
   const [habits, setHabits] = useState(() =>
     habitsList.map((name) => ({
       name,
       days: Array(7).fill(false),
-    })),
+    }))
   );
+
   const toggle = (hIdx: number, dIdx: number) => {
     setHabits((h) =>
       h.map((habit, idx) =>
         idx === hIdx
-          ? { ...habit, days: habit.days.map((done, id) => id === dIdx ? !done : done) }
+          ? {
+              ...habit,
+              days: habit.days.map((done, id) => (id === dIdx ? !done : done)),
+            }
           : habit
       )
     );
   };
+
   return (
     <div className="bg-white/90 rounded-lg shadow p-6 max-w-xl w-full mx-auto my-8 animate-fade-in">
       <h3 className="font-semibold text-lg mb-3 text-gray-900">Habit tracker</h3>
       <div className="overflow-x-auto">
-        <table className="min-w-full text-sm">
+        <table className="min-w-full text-sm table-fixed">
           <thead>
             <tr>
-              <th className="py-1"></th>
+              <th className="w-32 text-left text-xs font-medium text-gray-600"></th>
               {["S", "T", "Q", "Q", "S", "S", "D"].map((d, i) => (
-                <th 
+                <th
                   key={i}
-                  className="font-light text-xs px-2 text-center" // Mudança: text-center
-                  style={{ width: 40 }}
+                   className="w-10 text-xs font-medium text-gray-600 -translate-x-2.5"
                 >
                   {d}
                 </th>
@@ -38,10 +43,12 @@ export function HabitTracker() {
           </thead>
           <tbody>
             {habits.map((h, i) => (
-              <tr key={h.name}>
-                <td className="font-medium">{h.name}</td>
+              <tr key={h.name} className="border-t">
+                <td className="py-2 whitespace-nowrap text-sm font-medium text-gray-800">
+                  {h.name}
+                </td>
                 {h.days.map((done, j) => (
-                  <td key={j} className="text-center"> {/* Mudança: alinhamento centralizado */}
+                  <td key={j} className="text-center py-2">
                     <button
                       aria-label={done ? "Concluído" : "Pendente"}
                       className={`w-7 h-7 rounded-full flex items-center justify-center transition 
@@ -60,4 +67,3 @@ export function HabitTracker() {
     </div>
   );
 }
-

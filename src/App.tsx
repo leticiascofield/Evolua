@@ -32,7 +32,7 @@ const App = () => (
           <Route path="/perfil" element={<Profile />} />
           <Route path="/conteudo" element={<Content />} />
           <Route path="/menu" element={<Menu />} />
-          <Route path="/wishlist" element={<Wishlist />} />
+          <Route path="/desejos" element={<Wishlist />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

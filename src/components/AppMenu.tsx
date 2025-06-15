@@ -18,7 +18,7 @@ export default function AppMenu() {
         <Link className="hover:text-pink-600 transition-colors font-semibold" to="/habitos">Hábitos</Link>
         <Link className="hover:text-pink-600 transition-colors font-semibold" to="/mentoria">Mentoria</Link>
         <Link className="hover:text-pink-600 transition-colors font-semibold" to="/conteudo">Conteúdo</Link>
-        <Link className="hover:text-pink-600 transition-colors font-semibold" to="/wishlist">Wishlist</Link>
+        <Link className="hover:text-pink-600 transition-colors font-semibold" to="/desejos">Desejos</Link>
       </nav>
       <div className="flex items-center gap-4">
         <Link to="/perfil" className="group relative flex items-center">

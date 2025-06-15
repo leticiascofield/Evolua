@@ -33,7 +33,6 @@ export default function Agenda() {
           <h4 className="font-semibold text-pink-700">Fazer eventualmente</h4>
           <div className="mt-2 bg-gray-50/60 min-h-[40px] rounded p-3 text-gray-400 italic">Ex: trocar lâmpada, organizar fotos...</div>
         </div>
-        <div className="mt-8 text-xs text-gray-400">Kanban e visualizações avançadas em breve.</div>
       </div>
     </div>
   );

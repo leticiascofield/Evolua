@@ -32,7 +32,7 @@ export default function Mentorship() {
           </div>
           <div>
             <div className="rounded bg-pink-100/60 px-4 py-2 text-xs text-pink-900 mb-1">Quer sugestões ou ajuda para montar suas metas?</div>
-            <a href="#" className="text-pink-700 hover:underline text-xs font-semibold">Falar com assistente IA</a>
+            <a href="#" className="text-pink-700 hover:underline text-xs font-semibold">Entre em contato com nossos especialistas</a>
           </div>
         </div>
       </div>

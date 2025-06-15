@@ -1,4 +1,3 @@
-
 import { User, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -7,7 +6,7 @@ export default function AppMenu() {
     <header className="flex items-center justify-between py-4 px-8 border-b bg-white/80 backdrop-blur-md shadow-sm h-20">
       <div className="flex items-center gap-2">
         <span className="text-xl font-bold text-pink-600 font-playfair tracking-tight">
-          rotina feminina
+          Evolua
         </span>
         <span className="ml-2 text-xs bg-pink-50 text-pink-700 px-3 py-1 rounded-full font-medium">
           Beta

@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 const habitsList = ["Beber água", "Estudar", "Dormir 8h", "Exercício"];
 export function HabitTracker() {
@@ -25,7 +26,13 @@ export function HabitTracker() {
             <tr>
               <th className="py-1"></th>
               {["S", "T", "Q", "Q", "S", "S", "D"].map((d, i) => (
-                <th key={i} className="font-light text-xs px-2 text-right">{d}</th>
+                <th 
+                  key={i}
+                  className="font-light text-xs px-2 text-center" // Mudança: text-center
+                  style={{ width: 40 }}
+                >
+                  {d}
+                </th>
               ))}
             </tr>
           </thead>
@@ -34,7 +41,7 @@ export function HabitTracker() {
               <tr key={h.name}>
                 <td className="font-medium">{h.name}</td>
                 {h.days.map((done, j) => (
-                  <td key={j}>
+                  <td key={j} className="text-center"> {/* Mudança: alinhamento centralizado */}
                     <button
                       aria-label={done ? "Concluído" : "Pendente"}
                       className={`w-7 h-7 rounded-full flex items-center justify-center transition 
@@ -53,3 +60,4 @@ export function HabitTracker() {
     </div>
   );
 }
+

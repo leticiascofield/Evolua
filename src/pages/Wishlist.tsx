@@ -1,7 +1,7 @@
 export default function Desejos() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-pink-100 py-10 px-4">
-      <div className="max-w-3xl mx-auto rounded-xl bg-white/80 p-8 shadow">
+      <div className="max-w-xl mx-auto rounded-xl bg-white/80 p-8 shadow">
         <h2 className="font-playfair text-2xl font-bold text-yellow-700 mb-6">Desejos • Suas listas pessoais</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 

@@ -60,6 +60,8 @@ export default function Mentorship() {
           </div>
         </div>
         
+        <hr className="border-gray-300 my-6" />
+        
         <div className="mb-6 border-b border-gray-300 pb-6">
           <h5 className="font-semibold text-sm text-pink-700 mb-2">Objetivos da mentoria</h5>
           <div className="rounded-lg bg-pink-50 p-4">
@@ -79,21 +81,36 @@ export default function Mentorship() {
           <h5 className="font-semibold text-sm text-yellow-700 mb-2">Primeiros Passos</h5>
           <div className="flex flex-col gap-3 max-w-xl mx-auto">
             {[
-              "Organizando o caos",
-              "Definindo prioridades",
-              "Organizando a rotina na prática",
-              "Criação de assistentes de IA",
-            ].map((text) => (
-              <button
+              {
+                text: "Organizando o caos",
+                link: "https://www.notion.so/Organizando-o-caos-212cc1135dc48009ac54dda0541038e1",
+              },
+              {
+                text: "Definindo prioridades",
+                link: "https://www.notion.so/Definindo-prioridades-213cc1135dc480fcb046ee1ac1c9a90d",
+              },
+              {
+                text: "Organizando a rotina na prática",
+                link: "https://www.notion.so/Organizando-a-rotina-na-pr-tica-213cc1135dc4802882c5c1c195c5a440",
+              },
+              {
+                text: "Criação de assistentes de IA",
+                link: "https://www.notion.so/Cria-o-de-assistentes-de-IA-213cc1135dc4807a81eafe2a1e21cd12",
+              },
+            ].map(({ text, link }) => (
+              <a
                 key={text}
-                className="w-full bg-yellow-100 text-yellow-700 font-semibold py-3 rounded-md hover:bg-yellow-200 transition"
-                type="button"
+                href={link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-yellow-100 text-yellow-700 font-semibold py-3 rounded-md hover:bg-yellow-200 transition text-center"
               >
                 {text}
-              </button>
+              </a>
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );

@@ -5,7 +5,7 @@ export function RewardSystem() {
   const [coins, setCoins] = useState(6);
   return (
     <div className="max-w-xl mx-auto my-8 bg-white/90 rounded-lg shadow p-4 flex flex-col items-center animate-fade-in">
-      <h3 className="font-semibold mb-2 text-pink-700 text-lg">Recompensas & Gamificação</h3>
+      <h3 className="font-semibold mb-2 text-pink-700 text-lg">Recompensas e Gamificação</h3>
       <div className="flex items-center gap-6 mb-3">
         <span className="bg-pink-50 rounded px-4 py-2 font-semibold text-pink-600 text-sm">XP: {xp}</span>
         <span className="bg-yellow-50 rounded px-4 py-2 font-semibold text-yellow-600 text-sm">Moedas: {coins}</span>

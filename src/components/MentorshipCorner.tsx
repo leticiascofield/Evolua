@@ -1,7 +1,12 @@
+import { GraduationCap } from "lucide-react";
+
 export function MentorshipCorner() {
   return (
     <div className="max-w-xl mx-auto mb-8 bg-white/90 rounded-lg shadow p-6 animate-fade-in text-sm text-gray-800">
-      <h4 className="font-playfair text-xl font-bold text-pink-700 mb-2">Mentoria</h4>
+      <div className="flex items-center gap-2 mb-3">
+        <GraduationCap className="w-5 h-5 text-pink-700" />
+        <h3 className="font-semibold text-lg text-gray-900">Mentoria</h3>
+      </div>
       <p className="text-gray-700 mb-3">
         Descubra como transformar o caos da sua rotina em um plano estratégico com metas claras e alinhadas ao seu propósito.
       </p>

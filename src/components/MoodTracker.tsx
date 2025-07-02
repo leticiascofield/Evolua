@@ -1,6 +1,14 @@
-
 import { useState } from "react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
+import { Zap } from "lucide-react";
 
 const WEEK = ["Seg", "Ter", "Qua", "Qui", "Sex", "Sáb", "Dom"];
 const initialData = WEEK.map((day) => ({
@@ -14,7 +22,11 @@ export function MoodTracker() {
   const [data] = useState(initialData);
   return (
     <div className="rounded-lg bg-white/90 shadow p-6 max-w-xl mx-auto mb-6 animate-fade-in">
-      <h3 className="font-semibold text-lg mb-2 text-gray-900">Seu humor, energia e foco na semana</h3>
+      <div className="flex items-center gap-2 mb-2">
+        <Zap className="w-5 h-5 text-pink-600" />
+        <h3 className="font-semibold text-lg text-gray-900">Seu humor, energia e foco na semana</h3>
+      </div>
+
       <div className="h-48">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={data}>

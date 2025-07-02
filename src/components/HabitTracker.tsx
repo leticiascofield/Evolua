@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { CheckCircle } from "lucide-react";
 
 const habitsList = ["Beber água", "Estudar", "Dormir 8h", "Exercício"];
 
@@ -24,8 +25,11 @@ export function HabitTracker() {
   };
 
   return (
-    <div className="bg-white/90 rounded-lg shadow p-6 max-w-xl w-full mx-auto my-8 animate-fade-in">
-      <h3 className="font-semibold text-lg mb-3 text-gray-900">Habit tracker</h3>
+    <div className="bg-white/90 rounded-lg shadow p-6 max-w-xl w-full mx-auto my-8 animate-fade-in text-sm text-gray-800">
+      <div className="flex items-center gap-2 mb-3">
+        <CheckCircle className="w-5 h-5 text-pink-700" />
+        <h3 className="font-semibold text-lg text-gray-900">Habit tracker</h3>
+      </div>
       <div className="overflow-x-auto">
         <table className="min-w-full text-sm table-fixed">
           <thead>
@@ -34,7 +38,7 @@ export function HabitTracker() {
               {["S", "T", "Q", "Q", "S", "S", "D"].map((d, i) => (
                 <th
                   key={i}
-                   className="w-10 text-xs font-medium text-gray-600 -translate-x-2.5"
+                  className="w-10 text-xs font-medium text-gray-600 -translate-x-2.5"
                 >
                   {d}
                 </th>
@@ -55,7 +59,7 @@ export function HabitTracker() {
                         ${done ? "bg-pink-400 text-white" : "bg-gray-100 text-gray-400 hover:bg-pink-100"}`}
                       onClick={() => toggle(i, j)}
                     >
-                      {done ? "✓" : ""}
+                      {done ? <CheckCircle className="w-5 h-5" /> : ""}
                     </button>
                   </td>
                 ))}

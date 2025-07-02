@@ -1,11 +1,11 @@
+import { CalendarDays } from "lucide-react";
 
-import { Calendar } from "lucide-react";
 export function WeeklyPlanner() {
   return (
-    <div className="max-w-xl mx-auto mb-8 bg-white/90 rounded-lg shadow p-6 animate-fade-in">
-      <div className="flex items-center mb-2">
-        <Calendar className="w-5 h-5 text-pink-500 mr-2" />
-        <h4 className="font-semibold text-lg text-gray-900">Planejamento semanal</h4>
+    <div className="max-w-xl mx-auto mb-8 bg-white/90 rounded-lg shadow p-6 animate-fade-in text-sm text-gray-800">
+      <div className="flex items-center gap-2 mb-3">
+        <CalendarDays className="w-5 h-5 text-pink-700" />
+        <h3 className="font-semibold text-lg text-gray-900">Planejamento semanal</h3>
       </div>
       <div className="space-y-2">
         <div className="bg-pink-50/80 rounded px-4 py-2 flex items-center justify-between">
@@ -21,7 +21,9 @@ export function WeeklyPlanner() {
           <span className="text-gray-600 text-xs">21h</span>
         </div>
       </div>
-      <div className="mt-4 text-xs text-gray-500">Anote lembretes para a semana! <span className="ml-2">📝</span></div>
+      <div className="mt-4 text-xs text-gray-500">
+        Anote lembretes para a semana! <span className="ml-2">📝</span>
+      </div>
     </div>
   );
 }

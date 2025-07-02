@@ -1,7 +1,7 @@
 
 import { Link } from "react-router-dom";
 const shortcuts = [
-  { label: "Tarefas Pendentes", to: "/agenda", color: "bg-pink-100 text-pink-700" },
+  { label: "Tarefas", to: "/agenda", color: "bg-pink-100 text-pink-700" },
   { label: "Faculdade", to: "/agenda", color: "bg-blue-100 text-blue-700" },
   { label: "Estágio", to: "/agenda", color: "bg-green-100 text-green-800" },
   { label: "Finanças", to: "/desejos", color: "bg-yellow-100 text-yellow-800" },
